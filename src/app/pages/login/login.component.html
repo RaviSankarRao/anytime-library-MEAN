@@ -1,0 +1,41 @@
+<div class="example-container" *ngIf="displayLogin">
+  <mat-form-field>
+    <input matInput placeholder="Email" [(ngModel)]="userDetails.email" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Password" [(ngModel)]="userDetails.password" required>
+  </mat-form-field>
+
+  <button (click)="login()" mat-raised-button color="primary">Login</button>
+
+  <mat-chip-list class="register-link">
+    New User ? <mat-chip color="primary" selected="true" (click)="registerUser()">Regsiter here</mat-chip>
+  </mat-chip-list>
+</div>
+
+<div class="example-container" *ngIf="displayRegsiter">
+
+  <mat-form-field>
+    <input matInput placeholder="Email" [(ngModel)]="userDetails.email" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="First Name" [(ngModel)]="userDetails.firstName" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Last Name" [(ngModel)]="userDetails.lastName" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Password" [(ngModel)]="userDetails.password" required>
+  </mat-form-field>
+
+  <button *ngIf="!isRegisterClicked" (click)="register()" mat-raised-button color="primary">Regsiter</button>
+  <mat-progress-bar *ngIf="isRegisterClicked" class="example-margin" color="primary" mode="indeterminate"></mat-progress-bar>
+
+  <mat-chip-list class="register-link">
+    Existing User ? <mat-chip color="primary" selected="true" (click)="backToLogin()">Back to Login</mat-chip>
+  </mat-chip-list>
+</div>

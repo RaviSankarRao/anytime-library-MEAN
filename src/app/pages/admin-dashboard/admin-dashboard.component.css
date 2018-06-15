@@ -1,0 +1,23 @@
+.books-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 700px;
+    min-width: 80%;
+    overflow: auto;
+  }
+
+  .demo-tab-group {
+    border: 1px solid #e8e8e8;
+  }
+  
+  .demo-tab-content {
+    padding: 16px;
+  }
+  
+  .isbn-input {
+    margin-right: 20px;
+}
+
+.example-card {
+    max-width: 400px;
+  }

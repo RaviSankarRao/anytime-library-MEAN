@@ -1,0 +1,12 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 20%;
+  }
+
+  .register-link {
+    margin-top: 10px;
+  }
